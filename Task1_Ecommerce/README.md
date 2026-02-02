@@ -1,1 +1,1 @@
-Task 1 – E-commerce Project
+**Task 1 – E-commerce Project**
