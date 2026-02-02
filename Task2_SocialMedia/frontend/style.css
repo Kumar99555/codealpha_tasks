@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+body {
+  background: #fafafa;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 60px);
+  background: white;
+  border-right: 1px solid #dbdbdb;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 20px;
+}
+
+.sidebar p {
+  margin-bottom: 14px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* RIGHT SIDEBAR — BIG + SCROLLABLE */
+.rightbar {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 380px;                 /* 👈 wider */
+  height: calc(100vh - 60px);   /* full height below navbar */
+  padding: 20px;
+  overflow-y: auto;             /* 👈 internal scroll */
+}
+
+/* hide ugly scrollbar (optional but nice) */
+.rightbar::-webkit-scrollbar {
+  width: 6px;
+}
+.rightbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* RIGHTBAR CARDS */
+.rightbar .card {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* SUGGESTIONS */
+.suggestion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.suggestion img {
+  width: 58px;                  /* 👈 bigger */
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 14px;
+}
+
+.suggestion span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* FEED */
+.container {
+  max-width: 600px;
+  margin: 90px auto;            /* below navbar */
+  margin-left: 260px;           /* space for left bar */
+  margin-right: 420px;          /* space for right bar */
+}
+
+/* STORIES */
+.stories {
+  background: white;
+  border: 1px solid #dbdbdb;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.story {
+  text-align: center;
+  font-size: 12px;
+}
+
+.story img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #e1306c;
+  object-fit: cover;
+}
+
+/* POSTS */
+.post {
+  background: white;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.post img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.fit-image {
+  object-fit: contain;
+  background: #000;
+}
+
+.post-actions {
+  padding: 10px;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.post-caption {
+  padding: 0 10px 10px;
+  font-size: 14px;
+}
+
+/* COMMENTS */
+.comments {
+  padding: 0 10px 10px;
+}
+
+.comments p {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.comment-box {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.comment-box button {
+  padding: 6px 12px;
+  background: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
