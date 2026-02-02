@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskMaster - Project Management</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- Updated Font Awesome CDN URL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TaskMaster</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-tasks"></i> Projects</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Team</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button class="new-project-btn">+ New Project</button>
+            <div class="user-profile">
+                <!-- Changed to a stable placeholder image -->
+                <img src="https://i.pravatar.cc/40" alt="Profile" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects">
+            <div class="project">
+                <h3>CodeAlpha Website Redesign</h3>
+                <div class="project-meta">
+                    <span class="deadline"><i class="far fa-calendar-alt"></i> Due: May 30</span>
+                    <span class="members"><i class="fas fa-users"></i> 5</span>
+                    <span class="status in-progress">In Progress</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 65%;"></div>
+                </div>
+                <div class="tasks">
+                    <div class="task completed">
+                        <input type="checkbox" checked />
+                        <span>Design homepage layout</span>
+                    </div>
+                    <div class="task completed">
+                        <input type="checkbox" checked />
+                        <span>Create color scheme</span>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" />
+                        <span>Implement responsive design</span>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" />
+                        <span>Test cross-browser compatibility</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <button><i class="far fa-comment"></i> 3</button>
+                    <button><i class="fas fa-paperclip"></i> 2</button>
+                    <button><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>E-commerce Backend API</h3>
+                <div class="project-meta">
+                    <span class="deadline"><i class="far fa-calendar-alt"></i> Due: June 15</span>
+                    <span class="members"><i class="fas fa-users"></i> 3</span>
+                    <span class="status not-started">Not Started</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <div class="tasks">
+                    <div class="task">
+                        <input type="checkbox" />
+                        <span>Design database schema</span>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" />
+                        <span>Implement user authentication</span>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" />
+                        <span>Create product endpoints</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <button><i class="far fa-comment"></i> 0</button>
+                    <button><i class="fas fa-paperclip"></i> 0</button>
+                    <button><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Mobile App Development</h3>
+                <div class="project-meta">
+                    <span class="deadline"><i class="far fa-calendar-alt"></i> Due: July 1</span>
+                    <span class="members"><i class="fas fa-users"></i> 4</span>
+                    <span class="status completed">Completed</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+                <div class="tasks">
+                    <div class="task completed">
+                        <input type="checkbox" checked />
+                        <span>UI/UX design</span>
+                    </div>
+                    <div class="task completed">
+                        <input type="checkbox" checked />
+                        <span>Frontend development</span>
+                    </div>
+                    <div class="task completed">
+                        <input type="checkbox" checked />
+                        <span>Backend integration</span>
+                    </div>
+                    <div class="task completed">
+                        <input type="checkbox" checked />
+                        <span>Testing and deployment</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <button><i class="far fa-comment"></i> 8</button>
+                    <button><i class="fas fa-paperclip"></i> 5</button>
+                    <button><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="activity-feed">
+            <h2>Recent Activity</h2>
+            <div class="activity-item">
+                <!-- Updated to pravatar avatars -->
+                <img src="https://i.pravatar.cc/40?img=1" alt="User" class="activity-avatar" />
+                <div class="activity-content">
+                    <p><strong>John Doe</strong> completed task "Design homepage layout" in <strong>CodeAlpha Website Redesign</strong></p>
+                    <span class="activity-time">2 hours ago</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <img src="https://i.pravatar.cc/40?img=2" alt="User" class="activity-avatar" />
+                <div class="activity-content">
+                    <p><strong>Jane Smith</strong> commented on <strong>Mobile App Development</strong></p>
+                    <span class="activity-time">5 hours ago</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <img src="https://i.pravatar.cc/40?img=3" alt="User" class="activity-avatar" />
+                <div class="activity-content">
+                    <p><strong>Mike Johnson</strong> uploaded a file to <strong>E-commerce Backend API</strong></p>
+                    <span class="activity-time">1 day ago</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <img src="https://i.pravatar.cc/40?img=4" alt="User" class="activity-avatar" />
+                <div class="activity-content">
+                    <p><strong>Sarah Williams</strong> created project <strong>CodeAlpha Website Redesign</strong></p>
+                    <span class="activity-time">3 days ago</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <div class="modal" id="newProjectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create New Project</h2>
+            <form id="newProjectForm">
+                <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" required />
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Description</label>
+                    <textarea id="projectDescription"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectDeadline">Deadline</label>
+                    <input type="date" id="projectDeadline" required />
+                </div>
+                <button type="submit" class="submit-btn">Create Project</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

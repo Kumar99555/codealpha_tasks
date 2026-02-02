@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+nav a.active, nav a:hover {
+    color: #2c3e50;
+    background-color: #f0f2f5;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.new-project-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.new-project-btn:hover {
+    background-color: #1a252f;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.projects {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.project {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.project-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.status {
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status.in-progress {
+    background-color: #fff4e5;
+    color: #ff9500;
+}
+
+.status.not-started {
+    background-color: #f0f0f0;
+    color: #777;
+}
+
+.status.completed {
+    background-color: #e6f7ee;
+    color: #00a854;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #2c3e50;
+    border-radius: 4px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.task:hover {
+    background-color: #f5f7fa;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-top: 1px solid #eee;
+    padding-top: 0.5rem;
+}
+
+.project-actions button {
+    background: none;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+}
+
+.project-actions button:hover {
+    background-color: #f0f2f5;
+}
+
+.activity-feed {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.activity-feed h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.activity-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.activity-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.activity-time {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #777;
+}
+
+.modal h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #1a252f;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
