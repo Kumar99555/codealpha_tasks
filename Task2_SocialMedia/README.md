@@ -1,2 +1,1 @@
-# CodeAlpha_FullStack
-Full Stack Development Internship Projects – CodeAlpha
+# Task 1 – Social Media Platform
