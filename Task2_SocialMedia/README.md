@@ -1,1 +1,1 @@
-# Task 1 – Social Media Platform
+# Task 2 – Social Media Platform
